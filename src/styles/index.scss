@@ -18,7 +18,6 @@
 .main {
   display: grid;
   grid-template-columns: repeat(4, $card-width);
-  grid-template-rows: repeat(2);
   gap: 46px 48px;
   padding: 50px 40px;
   justify-content: center;

@@ -51,24 +51,28 @@
       color: $blue-color;
       position: relative;
     }
+  }
+}
 
-    &--is-active {
-      &:first-child {
-        color: $blue-color;
-        position: relative;
-        margin-left: 0;
-      }
+.is-active {
+  position: relative;
+  text-decoration: none;
+  font-size: 12px;
+  text-transform: uppercase;
+  align-items: center;
+  display: flex;
+  height: 60px;
+  margin-left: 20px;
+  color: $blue-color;
 
-      &::after {
-        content: '';
-        display: block;
-        border-bottom: 4px solid $blue-color;
-        position: absolute;
-        border-radius: 8px;
-        left: 0;
-        right: 0;
-        bottom: 0;
-      }
-    }
+  &::after {
+    content: ' ';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    height: 4px;
+    background-color: $blue-color;
+    border-radius: 8px;
   }
 }
