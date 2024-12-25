@@ -1,5 +1,15 @@
 @use '../utils/variables' as *;
 
+@mixin nav-link-common {
+  text-decoration: none;
+  font-size: 12px;
+  text-transform: uppercase;
+  align-items: center;
+  display: flex;
+  height: 60px;
+  margin-left: 20px;
+}
+
 .header {
   display: flex;
   justify-content: space-between;
@@ -31,13 +41,8 @@
 
   &_link {
     color: $black-color;
-    text-decoration: none;
-    font-size: 12px;
-    text-transform: uppercase;
-    align-items: center;
-    display: flex;
-    height: 60px;
-    margin-left: 20px;
+
+    @include nav-link-common;
 
     &:visited {
       color: $black-color;
@@ -55,15 +60,11 @@
 }
 
 .is-active {
+  @include nav-link-common;
+
   position: relative;
-  text-decoration: none;
-  font-size: 12px;
-  text-transform: uppercase;
-  align-items: center;
-  display: flex;
-  height: 60px;
-  margin-left: 20px;
   color: $blue-color;
+  margin-left: 0;
 
   &::after {
     content: ' ';
